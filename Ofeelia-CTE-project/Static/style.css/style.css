@@ -1,0 +1,84 @@
+body {
+  background: #eef6f0;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+header {
+  background: #cde7d8;
+  padding: 20px;
+}
+
+.chat-box {
+  width: 65%;
+  margin: auto;
+  background: white;
+  padding: 15px;
+  height: 300px;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+
+.You {
+  text-align: right;
+  color: #333;
+}
+
+.Ofeelia {
+  text-align: left;
+  color: #2f6f4e;
+}
+
+input {
+  width: 60%;
+  padding: 10px;
+}
+
+button {
+  background: #7fbfa3;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.disclaimer {
+  background: #fff3cd;
+  padding: 15px;
+  width: 65%;
+  margin: 20px auto;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.hotline-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffb3b3;
+  color: #5a0000;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.hotline-panel {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 300px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-size: 13px;
+}
+
+.cebuano {
+  font-size: 12px;
+  color: #555;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ofeelia | Because Every Mind Matters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Ofeelia</h1>
+  <p>Because Every Mind Matters</p>
+  <small>A project by Atuel & Bureros | 10 Faraday (S.Y. 2025–2026)</small>
+</header>
+
+<!-- HOTLINE BUTTON -->
+<div class="hotline-toggle" onclick="toggleHotlines()">🆘 Need Help?</div>
+
+<!-- HOTLINE PANEL -->
+<div id="hotline-panel" class="hotline-panel">
+  <h3>🆘 Mental Health & Emergency Hotlines</h3>
+
+  <p><strong>🚨 Emergency</strong></p>
+  <ul><li>911</li></ul>
+
+  <p><strong>🇵🇭 National Center for Mental Health</strong></p>
+  <ul><li>Toll-Free Landline: <strong>1553</strong></li></ul>
+
+  <p><strong>🏥 DOH Mental Health Hotline</strong></p>
+  <ul>
+    <li>0945-359-2632</li>
+    <li>0948-224-1857</li>
+  </ul>
+
+  <p><strong>🌱 DOH – CHD Caraga Regional Office</strong></p>
+  <ul>
+    <li>Globe: 0927-230-4885</li>
+    <li>Smart: 0908-615-8754</li>
+  </ul>
+
+  <p><strong>🏫 School & Local Support (Butuan City)</strong></p>
+  <ul>
+    <li>Agusan National High School Guidance Center (FB Page)</li>
+    <li>City Health Office – Butuan City</li>
+  </ul>
+
+  <p class="cebuano">
+    <em>
+      Mamahimong makig-alayon sa City Health Office o kaha sa Department of Health
+      ugaling makasinati sa problema sa Mental Health.
+    </em>
+  </p>
+
+  <button onclick="toggleHotlines()">Close</button>
+</div>
+
+<!-- DISCLAIMER -->
+<section class="disclaimer">
+  <strong>Important Notice</strong>
+  <p>
+    Ofeelia is a mental health awareness chatbot created for educational purposes only.
+    It is not a substitute for professional medical advice or treatment.
+  </p>
+  <p>
+    If you are in immediate danger, please contact emergency services or a trusted adult.
+  </p>
+</section>
+
+<!-- CHAT -->
+<div class="chat-box">
+  {% for sender, msg in chat %}
+    <div class="{{ sender }}">{{ msg }}</div>
+  {% endfor %}
+</div>
+
+<form method="POST">
+  <input type="text" name="message" placeholder="Type how you feel..." required>
+  <button>Send</button>
+</form>
+
+<script>
+function toggleHotlines() {
+  const panel = document.getElementById("hotline-panel");
+  panel.style.display = panel.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
